@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${character.name}"></title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body class="one_body">
+<div class="one_char_container">
+    <div class="one_char">
+        <img th:src="${character.image}"/>
+        <div>
+            <h2 class="chars_h2" th:text="${character.id}"></h2>
+            <h2 class="chars_h2" th:text="${character.name}"></h2>
+        </div>
+    </div>
+</div>
+<div style="text-align: center;">
+    <button class="one_char_button_center" onclick="goBack()">Назад</button>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>

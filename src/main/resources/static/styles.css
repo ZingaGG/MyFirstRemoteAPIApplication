@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'getschwifty-regular';
+    src: url('/fonts/getschwifty-regular.woff2') format('woff2'),
+         url('/fonts/getschwifty-regular.woff') format('woff');
+}
+
+h1.char_h1 {
+    text-align: center;
+    color: #E55137;
+    font-family: 'getschwifty-regular';
+}
+
+h2.chars_h2 {
+    color: #00FFFF;
+    font-family: 'getschwifty-regular';
+}
+
+.sort_container {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.bttn_sort {
+    background: cyan;
+    font-family: 'getschwifty-regular';
+    font-size: 25px;
+    color: #8b0000;
+}
+
+.char_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 4px double #32a1ce; /* Цвет и толщина границы */
+    padding: 10px; /* Отступ внутри контейнера */
+    border-radius: 5px; /* Закругление углов */
+}
+
+.char_card {
+    margin: 10px;
+    text-align: center;
+    border: 4px dashed #ccc
+}
+
+.char_url{
+    color: black;
+    text-decoration: none;
+}
+
+.char_url:hover {
+    font-size: 1.1em; /* Изменение размера текста при наведении */
+    border-radius: 5px; /* Изменение формы ссылки при наведении */
+}
+
+.chars_body {
+    background-color: black;
+}
+
+.one_body{
+    background-image: url('bodyBack/one_char_body_back.gif'); /* Путь к вашему анимированному GIF */
+    background-size: cover;
+}
+
+.one_char {
+    width: 300px;
+    margin: 0 auto;
+    border: 4px double #800080;
+    text-align: center;
+    background-color: purple;
+}
+
+.one_char_container {
+    text-align: center; /* Центрирует содержимое по горизонтали */
+}
+
+.one_char_button_center {
+    display: inline-block; /* Добавляем inline-block, чтобы кнопка не растягивалась на всю ширину */
+    margin-top: 60px;
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+    background: #0B63F6;
+}
+
+.one_char_button_center:hover {
+   box-shadow: #003CC5 0 0px 0px 40px inset;
+}
+
+.div_prev_page {
+    float: left;
+    margin-top: 40px;
+}
+.div_next_page {
+    float: right;
+    margin-top: 40px;
+}
+
+.page_switcher{
+    text-decoration: none;
+    color: #E55137;
+    font-family: 'getschwifty-regular';
+    font-size: 30px
+}
+
+
+

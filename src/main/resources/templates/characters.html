@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All characters</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="chars_body">
+<h1 class="char_h1"> All characters: </h1>
+<div class="sort_container">
+    <button class="bttn_sort" onclick="toggleSort()">Sort by name</button>
+
+    <script>
+        function toggleSort() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var currentSort = urlParams.get('sort');
+
+            // Если параметр sort отсутствует или равен false, меняем его на true, и наоборот
+            var newSort = currentSort === null || currentSort === 'false' ? 'true' : 'false';
+
+            urlParams.set('sort', newSort);
+            window.location.search = urlParams.toString();
+        }
+    </script>
+</div>
+<div class="char_container">
+    <div th:each="character : ${characters}">
+        <a class="char_url" th:href="@{/characters/{id}(id=${character.id})}">
+        <div class="char_card">
+            <img th:src="${character.image}" alt="Character Image"/>
+            <div class="char_info">
+                <h2 class="chars_h2" th:text="${character.id}"></h2>
+                <h2 class="chars_h2" th:text="${character.name}"></h2>
+            </div>
+        </div>
+        </a>
+    </div>
+</div>
+<div class="div_prev_page">
+    <a th:href="@{/charactersPage(page=${prevPage})}" class="page_switcher">Previous Page</a>
+</div>
+<div class="div_next_page">
+    <a th:href="@{/charactersPage(page=${nextPage})}" class="page_switcher">Next Page</a>
+</div>
+</body>
+</html>
